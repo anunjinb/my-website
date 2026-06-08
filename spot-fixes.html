@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="carbon" data-typeface="modern" data-rhythm="compact">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spot Fixes — Case study — Anunjin Batdelger</title>
+<meta name="description" content="Spot Fixes (Spotfixes Intelligence) — an enterprise bug-triage engine that predicts severity (S1–S4) at ~95% accuracy and detects duplicates with a RAG-based TF-IDF search engine. Trained on 222k+ Bugzilla records. A case study by Anunjin Batdelger." />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Spot Fixes — Case study — Anunjin Batdelger" />
+<meta property="og:description" content="An enterprise bug-triage engine that predicts severity at ~95% accuracy and catches duplicates — trained on 222k+ Bugzilla bug reports." />
+<meta property="og:image" content="https://portfolio-anunjin.vercel.app/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://portfolio-anunjin.vercel.app/assets/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/portfolio.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <div class="wrap nav-inner">
+      <a href="index.html#top" class="nav-mark"><b>Anunjin</b> / Portfolio 2026</a>
+      <nav class="nav-links">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#writing">Writing</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ───────── CASE HERO ───────── -->
+    <section class="cs-hero wrap" data-screen-label="Spot Fixes — Hero">
+      <a href="index.html#projects" class="cs-back"><span class="arr">←</span> Back to projects</a>
+
+      <div class="cs-eyebrow">
+        <span class="eyebrow" style="margin:0;">Case study</span>
+        <span class="dot-sep"></span>
+        <span class="eyebrow" style="margin:0; color:var(--accent);">Machine learning</span>
+        <span class="dot-sep"></span>
+        <span class="eyebrow" style="margin:0;">2025</span>
+      </div>
+
+      <h1 class="cs-title">Spot Fixes</h1>
+      <p class="cs-summary">An enterprise bug-triage engine that predicts severity at ~95% accuracy and catches duplicates — trained on 222k+ Bugzilla bug reports.</p>
+
+      <div class="cs-glance">
+        <div class="g">
+          <span class="lbl">Role</span>
+          <span class="v">ML &amp; full-stack</span>
+        </div>
+        <div class="g">
+          <span class="lbl">Timeline</span>
+          <span class="v">Fall 2025 — Spring 2026</span>
+        </div>
+        <div class="g">
+          <span class="lbl">Stack</span>
+          <span class="v stack">
+            <span class="pill">React</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">Supabase</span>
+            <span class="pill">Random Forest</span>
+          </span>
+        </div>
+        <div class="g">
+          <span class="lbl">Status</span>
+          <span class="v">Open source · on GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────── BODY ───────── -->
+    <div class="cs-body wrap">
+
+      <!-- 01 Problem -->
+      <section class="cs-block reveal" data-screen-label="Spot Fixes — Problem">
+        <div class="cs-block-grid">
+          <div class="cs-block-head">
+            <p class="cs-kicker">01 — Problem</p>
+            <h2 class="cs-h">The important bug is buried</h2>
+          </div>
+          <div class="cs-prose">
+            <p>Engineering teams don't lack bug reports — they drown in them. Triage is manual, the same issue gets filed five different ways, and the one critical bug sits buried under noise. Severity comes down to <strong>whoever shouts loudest</strong>, not what's actually most urgent.</p>
+            <p>The cost isn't just time. It's the S1 regression that ships because it looked like a duplicate, and the hours spent re-triaging reports a model could have scored in seconds.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 What I built -->
+      <section class="cs-block reveal" data-screen-label="Spot Fixes — Approach">
+        <div class="cs-block-grid">
+          <div class="cs-block-head">
+            <p class="cs-kicker">02 — What I built</p>
+            <h2 class="cs-h">A model that triages for you</h2>
+          </div>
+          <div class="cs-prose">
+            <p>Spot Fixes predicts a severity level for every incoming bug, catches duplicates before they pile up, and gets sharper every time an engineer corrects it. A <strong>Random Forest classifier</strong> with <strong>TF-IDF</strong> vectorization reaches <strong>~95% classification accuracy</strong> on 222k+ Bugzilla records, sorting reports into <strong>S1–S4</strong> with a confidence score — while a RAG-based search engine using TF-IDF cosine similarity surfaces duplicates the moment one lands.</p>
+            <p>React on the front, FastAPI and Supabase behind it, with JWT auth, role-based access, and Row-Level Security for true multi-tenant isolation — a real product, not a notebook. The model is one piece; the platform around it is what makes the triage usable day to day.</p>
+          </div>
+        </div>
+
+        <div class="cs-steps" style="margin-top: clamp(1.75rem, 4vw, 2.75rem);">
+          <div class="cs-step">
+            <span class="n">01</span>
+            <div>
+              <h4>Ingest at scale</h4>
+              <p>222k+ Bugzilla bug records flow through an automated ETL pipeline into Supabase Postgres — the training set and the live corpus, with bulk ingestion for more.</p>
+            </div>
+          </div>
+          <div class="cs-step">
+            <span class="n">02</span>
+            <div>
+              <h4>Predict severity</h4>
+              <p>A Random Forest classifier with TF-IDF vectorization sorts each report into S1–S4 at ~95% accuracy, attaching a confidence score.</p>
+            </div>
+          </div>
+          <div class="cs-step">
+            <span class="n">03</span>
+            <div>
+              <h4>Detect duplicates</h4>
+              <p>A RAG-based search engine with TF-IDF cosine similarity retrieves related and duplicate reports in real time, so the same issue isn't triaged five times.</p>
+            </div>
+          </div>
+          <div class="cs-step">
+            <span class="n">04</span>
+            <div>
+              <h4>Learn from people</h4>
+              <p>Engineer overrides are captured as ground truth and fed back into retraining, while live telemetry tracks accuracy and model drift.</p>
+            </div>
+          </div>
+        </div>
+
+        <figure class="cs-figure">
+          <div class="cs-frame placeholder" data-slot="product-ui">
+            <svg class="ph-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <span class="ph-t">Product screenshot</span>
+            <span class="ph-s">Drop a Spot Fixes dashboard screenshot here — send it to me and I'll place it.</span>
+          </div>
+          <figcaption class="cs-caption">The Spot Fixes triage view — prioritized bugs with duplicates grouped.</figcaption>
+        </figure>
+      </section>
+
+      <!-- 03 Outcome -->
+      <section class="cs-block reveal" data-screen-label="Spot Fixes — Outcome">
+        <div class="cs-block-grid">
+          <div class="cs-block-head">
+            <p class="cs-kicker">03 — Outcome</p>
+            <h2 class="cs-h">Triage that earns its keep</h2>
+          </div>
+          <div class="cs-prose">
+            <p>At ~95% classification accuracy across a 222k-record corpus, Spot Fixes turns triage from a daily chore into a background process. Teams see the S1 that matters first, stop re-filing duplicates, and keep a model that learns from their own corrections rather than a fixed rulebook.</p>
+            <p>It's a full product — model, API, multi-tenant backend, and interface — built to prove that ML triage works when it's wrapped in a workflow people will actually use. Built as a Gannon senior-design project; the source is on GitHub.</p>
+          </div>
+        </div>
+
+        <div class="cs-metrics" style="margin-top: clamp(1.75rem, 4vw, 2.75rem);">
+          <div class="cs-metric">
+            <span class="num">~95%</span>
+            <span class="lbl">Bug classification accuracy (Random Forest + TF-IDF)</span>
+          </div>
+          <div class="cs-metric">
+            <span class="num">222k+</span>
+            <span class="lbl">Bugzilla records via an automated ETL pipeline</span>
+          </div>
+          <div class="cs-metric">
+            <span class="num">S1–S4</span>
+            <span class="lbl">Severity classes predicted with confidence scoring</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ───────── NEXT / CTA ───────── -->
+    <section class="cs-next wrap">
+      <div class="cs-next-grid">
+        <a class="cs-next-card" href="bogdai.html">
+          <span class="lbl">Previous project</span>
+          <span class="big">BogdAI <span class="arr">↗</span></span>
+        </a>
+        <a class="cs-next-card cta" href="https://github.com/tajmilur-rahman/senior-design-2025" target="_blank" rel="noopener">
+          <span class="lbl">Source code</span>
+          <span class="big">View on GitHub <span class="arr">↗</span></span>
+        </a>
+      </div>
+      <div class="footer-base" style="border:0;">
+        <span>© 2026 Anunjin Batdelger</span>
+        <span class="built">Building things that work</span>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // Nav border on scroll
+    var nav = document.getElementById('nav');
+    function onScroll(){ nav.classList.toggle('scrolled', window.scrollY > 12); }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Reveal on scroll
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var targets = document.querySelectorAll('.reveal, .stagger');
+    if (reduce || !('IntersectionObserver' in window)) {
+      targets.forEach(function(t){ t.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach(function(t){ io.observe(t); });
+    }
+  </script>
+</body>
+</html>
